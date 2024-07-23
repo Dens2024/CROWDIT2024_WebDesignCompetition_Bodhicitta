@@ -538,18 +538,24 @@ header .navbar .navbar-list .navbar-item a:hover:before{
 \*-----------------------------------*/
 
 .service-list {
-  padding-block: 60px 60px;
-  padding-inline: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
   display: grid;
-  gap: 30px;
+  padding-block: 20px 20px;
+  padding-inline: 20px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 0.6em;
   border-radius: var(--radius-12);
-  margin-block-start: -120px;
+  margin-block-start: -160px;
   background-color: var(--white);
   box-shadow: var(--shadow-2);
 }
 
 .counters{
-  padding: 3em 2em;
+  padding: 2em 2em;
   background: var(--verdigris);
   color: var(--white);
   text-align: center;
@@ -1341,94 +1347,14 @@ header .navbar .navbar-list .navbar-item a:hover:before{
   margin-top: 20%;
 }
 
-
-.speedometer {
-  width: 280px;
-  height: 280px;
-  padding: 60px;
-  border-radius: 50%;
-  background: 
-  radial-gradient(#ffff 0 0) content-box,
-  conic-gradient(
-      from -90deg,
-      var(--c5) 36deg,
-      var(--c4) 0 72deg,
-      var(--c3) 0 108deg,
-      var(--c2) 0 144deg,
-      var(--c1) 0 180deg,
-      #0000 0
-  );
-  position: relative;
-}
-  
-.needle {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  padding: 80px;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
-  background:
-  conic-gradient(
-      from 175deg at 50% 55%,
-      #ccc 2deg,
-      #2757a5 3deg 7deg,
-      #ccc 8deg 10deg,
-      #0000 0
-  ) 0 -217px no-repeat,
-  radial-gradient(
-    #2757a5 0 50%,
-      #ccc 51%
-  ) content-box;
-  transform-origin: center;
-  transform: rotate(calc(var(--score) * 1.8deg - 90deg));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 1s ease-in-out; 
+.needle{
+  display: none;
 }
 
-.score{
-  rotate: calc(cos(var(--score) * 180deg / 100) * 90deg);
-  font-size: 24px;
-  font-weight: 800;
-  color: #fff;
+.status{
+  display: none;
 }
 
-.status {
-  position: absolute;
-  bottom: 105%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #000;
-  text-align: center;
-  width: 100%;
-}
-
-
-.status-Depresi-Berat {
-  color: var(--c1);
-}
-
-.status-Depresi-Sedang {
-  color: var(--c2);
-}
-
-.status-Depresi-Ringan {
-  color: var(--c3);
-}
-
-.status-Sehat {
-  color: var(--c4);
-}
-
-.status-Bahagia {
-  color: var(--c5);
-}
 
 
 
@@ -1522,7 +1448,7 @@ header .navbar .navbar-list .navbar-item a:hover:before{
    * SERVICE
    */
 
-  /* .service-list { grid-template-columns: 1fr 1fr; } */
+  .service-list { grid-template-columns: 4fr 1fr; }
 
 
 
@@ -1599,9 +1525,9 @@ header .navbar .navbar-list .navbar-item a:hover:before{
 }
 
 .status {
+    display: block;
     position: absolute;
     bottom: 105%;
-    transform: translateX(-50%);
     font-size: 1.5em;
     font-weight: bold;
     color: #000;
@@ -1713,7 +1639,31 @@ header .navbar .navbar-list .navbar-item a:hover:before{
    * SERVICE
    */
 
-  .service-list { grid-template-columns: repeat(1, 1fr); }
+  .service-list {
+      padding-block: 60px 60px;
+      padding-inline: 60px;
+      width: 100%;
+      margin: 0;
+      display: grid;
+      font-size: 1em;
+      gap: 30px;
+      border-radius: var(--radius-12);
+      margin-block-start: -120px;
+      background-color: var(--white);
+      box-shadow: var(--shadow-2);
+      grid-template-columns: repeat(1, 1fr); 
+  }
+
+  .counters{
+    padding: 3em 2em;
+    background: var(--verdigris);
+    color: var(--white);
+    text-align: center;
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow-2);
+  }
+
+  
 
   /**
    * ABOUT
