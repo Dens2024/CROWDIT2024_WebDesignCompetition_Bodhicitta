@@ -673,6 +673,7 @@ header .navbar .navbar-list .navbar-item a:hover:before{
   align-items: center;
   gap: 10px;
   margin-block-end: 10px;
+  text-align: justify;
 }
 
 .about-item ion-icon {
@@ -1342,9 +1343,9 @@ header .navbar .navbar-list .navbar-item a:hover:before{
 
 
 .speedometer {
-  width: 400px;
-  height: 400px;
-  padding: 100px;
+  width: 280px;
+  height: 280px;
+  padding: 60px;
   border-radius: 50%;
   background: 
   radial-gradient(#ffff 0 0) content-box,
@@ -1362,9 +1363,9 @@ header .navbar .navbar-list .navbar-item a:hover:before{
   
 .needle {
   position: absolute;
-  width: 340px;
-  height: 340px;
-  padding: 110px;
+  width: 300px;
+  height: 300px;
+  padding: 80px;
   left: 50%;
   top: 50%;
   translate: -50% -50%;
