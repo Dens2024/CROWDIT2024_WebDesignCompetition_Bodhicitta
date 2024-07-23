@@ -29,6 +29,10 @@
             overflow: hidden;
         }
 
+        a{
+            text-decoration: none;
+        }
+
         .sidebar-left {
             width: 450px;
             background-image: url('assets/images/hero-bg.png');
@@ -210,25 +214,29 @@
 
         .sub-center {
             display: flex;
-            justify-content: center;
+            justify-content: end;
             align-items: center;
-            width: 85%;
-            max-width: 100%;
-            /* Adjust max width as needed */
-            height: 70%;
-            max-height: 240px;
-            margin-left: 4%;
+            width: auto;
+            max-width: 92%;
+            height: auto;
+            left: 4%;
+            max-height: 250px;
             margin-top: 155px;
-            /* Adjust max height as needed */
             background-color: #ffffff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            /* Hide overflow to ensure contained scaling */
-            padding: 20px;
+            padding: auto;
             border-radius: 10px;
             z-index: 2;
             position: relative;
             animation: fadeInUp 1s ease-in-out;
+        }
+
+        .sub-center .ulangi{
+            margin-right: 20px;
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 20px;
         }
 
         .sub-center i {
@@ -237,7 +245,6 @@
 
         .sub-center a {
             margin-left: -110px;
-            margin-top: 40%;
             font-size: 1em;
             color: #0056b3;
             text-decoration: none;
@@ -409,7 +416,7 @@
         }
 
         .content-item {
-            height: 115px;
+            height: 100px;
             flex: 1 1 calc(100% - 20px);
             /* Ensure items take up half of the container width minus the gap */
             flex-direction: row;
@@ -420,7 +427,7 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
+            box-sizing: border-box; 
             overflow: hidden;
             /* Hide overflow to maintain layout */
             position: relative;
@@ -428,11 +435,10 @@
         }
 
         .content-item img {
-            width: 23%;
+            width: auto;
             /* Ensure image takes up the full width of the container */
             height: auto;
-            /* Maintain aspect ratio */
-            max-width: 100%;
+            max-height: 100%;
             /* Ensure image does not overflow container */
             border-radius: 10px;
             object-fit: cover;
@@ -444,7 +450,7 @@
             margin: 10px 0;
             margin-top: -25px;
             margin-left: 100px;
-            font-size: 1em;
+            font-size: 0.8em;
         }
 
         /* Responsive adjustments */
@@ -492,24 +498,22 @@
                 .sub-center {
                     width: auto;
                     height: auto;
-                    max-height: max-content;
-                    max-width: 900px;
-                    padding-right: 20px;
-                    margin-right: 20px;
                     margin-top: 28%;
+                    padding: 0;
                 }
 
                 .content-item {
                     flex-direction: column;
                     align-items: center;
+                    top: 0;
                 }
 
                 .content-item img {
-                    width: 100%;
+                    width: auto;
                     /* Make image responsive to the content box width */
-                    height: 100%;
+                    height: auto;
                     /* Maintain aspect ratio */
-                    max-width: 100px;
+                    max-width: 1000px;
                     /* Limit maximum width to avoid excessively large images */
                     object-fit: cover;
                     /* Ensure image covers the space without distortion */
