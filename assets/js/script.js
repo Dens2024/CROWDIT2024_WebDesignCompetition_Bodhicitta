@@ -123,63 +123,63 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const needle = document.getElementById('needle');
-const scoreElement = document.getElementById('score');
-const statusElement = document.getElementById('status');
+// const needle = document.getElementById('needle');
+// const scoreElement = document.getElementById('score');
+// const statusElement = document.getElementById('status');
 
-// Define status ranges with corresponding classes
-const statusRanges = [
-    { max: 20, text: 'Bahagia', class: 'status-Bahagia' },
-    { max: 40, text: 'Sehat', class: 'status-Sehat' },
-    { max: 60, text: 'Depresi Ringan', class: 'status-Depresi-Ringan' },
-    { max: 80, text: 'Depresi Sedang', class: 'status-Depresi-Sedang' },
-    { max: 100, text: 'Depresi Berat', class: 'status-Depresi-Berat' }
-];
+// // Define status ranges with corresponding classes
+// const statusRanges = [
+//     { max: 20, text: 'Bahagia', class: 'status-Bahagia' },
+//     { max: 40, text: 'Sehat', class: 'status-Sehat' },
+//     { max: 60, text: 'Depresi Ringan', class: 'status-Depresi-Ringan' },
+//     { max: 80, text: 'Depresi Sedang', class: 'status-Depresi-Sedang' },
+//     { max: 100, text: 'Depresi Berat', class: 'status-Depresi-Berat' }
+// ];
 
-function getRandomScore() {
-    return Math.floor(Math.random() * 101); // Skor acak antara 0 dan 100
-}
+// function getRandomScore() {
+//     return Math.floor(Math.random() * 101); // Skor acak antara 0 dan 100
+// }
 
-function updateSpeedometer(score) {
-    const rotationDegree = (score / 100) * 180 - 90; // Menghitung derajat rotasi jarum
-    needle.style.setProperty('--score', score);
-    needle.style.transform = `rotate(${rotationDegree}deg)`;
-    scoreElement.textContent = score;
+// function updateSpeedometer(score) {
+//     const rotationDegree = (score / 100) * 180 - 90; // Menghitung derajat rotasi jarum
+//     needle.style.setProperty('--score', score);
+//     needle.style.transform = `rotate(${rotationDegree}deg)`;
+//     scoreElement.textContent = score;
 
-    // Update status berdasarkan skor
-    const status = statusRanges.find(range => score <= range.max);
-    statusElement.textContent = `${status.text}`;
+//     // Update status berdasarkan skor
+//     const status = statusRanges.find(range => score <= range.max);
+//     statusElement.textContent = `${status.text}`;
 
-    // Update status class based on score
-    statusElement.className = 'status'; // Reset class
-    statusElement.classList.add(status.class);
-}
+//     // Update status class based on score
+//     statusElement.className = 'status'; // Reset class
+//     statusElement.classList.add(status.class);
+// }
 
-function update() {
-    const score = getRandomScore();
-    updateSpeedometer(score);
-}
+// function update() {
+//     const score = getRandomScore();
+//     updateSpeedometer(score);
+// }
 
-// Perbarui speedometer setiap 2 detik
-setInterval(update, 2000);
+// // Perbarui speedometer setiap 2 detik
+// setInterval(update, 2000);
 
-// Inisialisasi speedometer saat halaman dimuat
-update();
+// // Inisialisasi speedometer saat halaman dimuat
+// update();
 
-function updateSpeedometer(score) {
-    const rotationDegree = (score / 100) * 180 - 90; // Menghitung derajat rotasi jarum
-    needle.style.setProperty('--score', score);
-    needle.style.transform = `rotate(${rotationDegree}deg)`;
-    scoreElement.textContent = score;
+// function updateSpeedometer(score) {
+//     const rotationDegree = (score / 100) * 180 - 90; // Menghitung derajat rotasi jarum
+//     needle.style.setProperty('--score', score);
+//     needle.style.transform = `rotate(${rotationDegree}deg)`;
+//     scoreElement.textContent = score;
 
-    // Update status berdasarkan skor
-    const status = statusRanges.find(range => score <= range.max);
-    statusElement.textContent = `${status.text}`;
+//     // Update status berdasarkan skor
+//     const status = statusRanges.find(range => score <= range.max);
+//     statusElement.textContent = `${status.text}`;
 
-    // Update status class based on score
-    statusElement.className = 'status'; // Reset class
-    statusElement.classList.add(status.class);
-}
+//     // Update status class based on score
+//     statusElement.className = 'status'; // Reset class
+//     statusElement.classList.add(status.class);
+// }
 
 const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll('.narbar-item .navbar-link').forEach(link => {
